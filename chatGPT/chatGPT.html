@@ -1,0 +1,21 @@
+<template>
+  <h1>OpenAI(Text-completion)</h1>
+  <lightning-input onchange={handleChange} value={searchTerm}></lightning-input>
+  <lightning-input
+    onchange={handleChange2}
+    value={searchTerm2}
+  ></lightning-input>
+  <lightning-button
+    type="button"
+    label="Click"
+    onclick={handleClick}
+  ></lightning-button
+  ><br /><br />
+
+  <template if:true={responseData}>
+    <lightning-formatted-rich-text
+      disable-linkify
+      value={responseData}
+    ></lightning-formatted-rich-text>
+  </template>
+</template>
